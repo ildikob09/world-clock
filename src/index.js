@@ -22,6 +22,15 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+  let limaElement = document.querySelector("#lima");
+  if (limaElement) {
+    let limaTimeElement = limaElement.querySelector(".time");
+    let limaDateElement = limaElement.querySelector(".date");
+    let limaTime = moment().tz("America/Lima");
+
+    limaDateElement.innerHTML = limaTime.format("MMMM Do YYYY");
+    limaTimeElement.innerHTML = limaTime.format("h:mm:ss [<small>]A[</small>]");
+  }
 }
 
 function updateCity(event) {
@@ -43,7 +52,7 @@ function updateCity(event) {
             "h:mm:ss [<small>]A[</small>]"
           )} 
         </div>  
-        <a href="index.html">Go back to front page </a>   
+        <a href="index.html">Go back to front page</a>   
   `;
 }
 
