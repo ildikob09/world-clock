@@ -68,3 +68,8 @@ footer {
 strong {
   color: purple;
 }
+
+#frontpage {
+  color: purple;
+  font-size: 12px;
+}
